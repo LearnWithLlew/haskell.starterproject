@@ -12,3 +12,4 @@ jobs:
       - run: cabal update
       - run: cabal install --lib HUnit
       - run: runhaskell code.hs
+      - run: echo $?
