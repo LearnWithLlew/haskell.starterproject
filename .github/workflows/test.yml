@@ -3,18 +3,12 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        cabal: ["3.4"]
-        ghc: ["8.8.4", "8.10.5", "9.0.1"]
-    env:
-      CONFIG: "--enable-tests --enable-benchmarks"
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: haskell/actions/setup@v1.2
         with:
-          ghc-version: ${{ matrix.ghc }}
-          cabal-version: ${{ matrix.cabal }}
+          ghc-version: 9.0.1
+          cabal-version: 3.4
       - run: cabal update
       - run: cabal install --lib HUnit
       - run: runhaskell code.hs
