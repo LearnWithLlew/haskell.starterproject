@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Run Haskell Tests
+        uses: sol/run-haskell-tests@v1
