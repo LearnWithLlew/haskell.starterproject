@@ -9,7 +9,7 @@ evolve x y =
 tests = TestList 
     [
         TestCase (assertEqual "A passing test passes" (2) (evolve 1 1) ),
-        TestCase (assertEqual "A failing test fails" (3) (evolve 1 1))
+        TestCase (assertEqual "2 + 2 is 4" (4) (evolve 2 2))
     ]
 
 
