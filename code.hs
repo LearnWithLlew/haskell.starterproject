@@ -1,4 +1,5 @@
 import Test.HUnit
+import System.Exit
 
 
 evolve :: Int -> Int -> Int
@@ -11,4 +12,12 @@ tests = TestList
         TestCase (assertEqual "A failing test fails" (3) (evolve 1 1))
     ]
 
-main = do runTestTT tests
+
+main :: IO ()
+main = do
+  results <- runTestTT tests
+  if (errors results + failures results == 0)
+    then
+      exitWith ExitSuccess
+    else
+      exitWith (ExitFailure 1)
