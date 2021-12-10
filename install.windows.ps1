@@ -10,7 +10,7 @@ iwr -useb https://raw.githubusercontent.com/JayBazuzi/machine-setup/main/windows
 choco install haskell-dev
 
 # Clone repo
-& "C:\Program Files\Git\cmd\git.exe" clone https://raw.githubusercontent.com/LearnWithLlew/haskell.starterproject.get C:\Code\haskell.starterproject
+& "C:\Program Files\Git\cmd\git.exe" clone https://github.com/LearnWithLlew/haskell.starterproject.git C:\Code\haskell.starterproject
 cd C:\Code\haskell.starterproject
 
 # Run starting haskell stuff
