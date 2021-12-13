@@ -11,4 +11,4 @@ jobs:
           cabal-version: 3.4
       - run: cabal update
       - run: cabal install --lib HUnit
-      - run: runhaskell code.hs
+      - run: ./run_tests.sh
